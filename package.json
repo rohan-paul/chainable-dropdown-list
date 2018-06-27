@@ -1,5 +1,5 @@
 {
-  "name": "React Drop-Down",
+  "name": "ReactDropDown",
   "version": "1.0.0",
   "description": "A chained dropdown UI with React",
   "main": "server.js",

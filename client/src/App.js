@@ -14,7 +14,7 @@ class App extends React.Component {
         data: this.props.data,
         carMake: '',
         model: '',
-        multiple: false
+        multiple: true
       }
     }
 
@@ -36,12 +36,14 @@ class App extends React.Component {
   }
 
   render () {
+
     let filteredItems = this.props.data;
     let state = this.state;
     let filterProperties = ["carMake", "model"];
 
     filterProperties.forEach(filterBy => {
       let filterValue = state[filterBy];
+
       if (filterValue) {
         filteredItems = filteredItems.filter(item =>item[filterBy] === filterValue);
       }
@@ -64,7 +66,7 @@ class App extends React.Component {
             changeOption={this.filterItems} />
 
         <div className="filter-form">
-          <FilterItems data={filteredItems} />
+          <FilterItems data={filteredItems} toggle={true} />
         </div>
       </div>
     )

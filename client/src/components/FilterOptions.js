@@ -14,18 +14,15 @@ class FilterOptions extends React.Component {
 
           <label>Car Make</label>
           <select id="carMake" value={this.props.carMake} onChange={this.changeOption.bind(this, 'carMake')}>
-          {this.props.carMakeOptions.map(option => {
-            return ( <option key={option} value={option}>{option}</option> )
-          })}
+
+          {this.props.carMakeOptions.map(option => (<option key={option} value={option}>{option}</option> ))}
           </select>
 
           <label>Model</label>
           <select id="model" value={this.props.model} onChange={this.changeOption.bind(this, 'model')}>
-          {this.props.modelOptions.map(option => {
-            return ( <option key={option} value={option}>{option}</option> )
-          })}
-          </select>
 
+          {this.props.modelOptions.map(option => (<option key={option} value={option}>{option}</option> ))}
+          </select>
 
         </div>
       </div>

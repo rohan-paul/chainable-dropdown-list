@@ -6,13 +6,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 var filterData = [
 
-  { name: 'Bill Gates', carMake: 'Ford', model: 'Edge' },
-  { name: 'Steeve Woz', carMake: 'Acura', model: 'ILX' },
-  { name: 'Steve Jobs', carMake: 'Ford', model: 'Escape' },
-  { name: 'Mark Zukerberg', carMake: 'Acura', model: 'MDX' }
+  {
+    name: 'Awesome Ford Edge',
+    carMake: 'Ford',
+    model: 'Edge'
+  },
+  {
+    name: 'Beautiful Acura ILX',
+    carMake: 'Acura',
+    model: 'ILX'
+  },
+  {
+    name: 'Sensational Ford Escase',
+    carMake: 'Ford',
+    model: 'Escape'
+  },
+  {
+    name: 'Dazzling Acura MDX',
+    image: './img/Acura-MDX.jpg',
+    carMake: 'Acura',
+    model: 'MDX'
+
+  }
+
 ];
 
 ReactDOM.render(
-  <App data={filterData} />,
+  <App data = {filterData}/>,
   document.getElementById('root'));
-

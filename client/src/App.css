@@ -13,8 +13,8 @@ html,body {
   align-items: center;
 }
 .filter-form {
-  height: 300px;
-  width: 200px;
+  height: 1000px;
+  width: 1000px;
   border: solid 1px gold;
   overflow: auto;
 }
