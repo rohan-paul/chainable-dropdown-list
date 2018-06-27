@@ -69,6 +69,7 @@ Project-Note-PAUL
 !/log/.keep
 /tmp
 /.gems
+/.vscode
 
 CountDownTimer-Note.odt
 random-code-1.js

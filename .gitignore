@@ -23,6 +23,7 @@ yarn-error.log*
 # Ignore docs files
 _gh_pages
 .ruby-version
+keys_dev.js
 
 # Numerous always-ignore extensions
 *.diff

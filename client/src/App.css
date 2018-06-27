@@ -22,7 +22,7 @@ html,body {
   background: gold;
   height: 30px;
   padding: 5px 10px;
-  color: goldenrod;
+  color: black;
   border-bottom: solid 1px goldenrod;
 }
 .filter-options {
