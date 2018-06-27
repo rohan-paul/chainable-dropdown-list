@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const CarSchema = new Schema({
+let CarSchema = new Schema({
 
   name: String,
   carMake: String,
