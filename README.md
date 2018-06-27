@@ -1,4 +1,6 @@
-Small MERN stack app
+Small UI built with React (The date to be updated from mLab)
+
+Deployed [here in Heroku](https://react-dynamic-drop-down.herokuapp.com/)
 
 # Install dependencies for server
 npm install

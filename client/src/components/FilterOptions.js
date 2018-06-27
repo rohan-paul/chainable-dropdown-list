@@ -13,7 +13,7 @@ class FilterOptions extends React.Component {
         <div className="filter-option">
 
           <label>Car Make</label>
-          <select id="carMake" value={this.props.carMake} onChange={this.changeOption.bind(this, 'carMake')}>
+          <select id="carMake" placeholder="Search by tags" value={this.props.carMake} onChange={this.changeOption.bind(this, 'carMake')}>
 
           {this.props.carMakeOptions.map(option => (<option key={option} value={option}>{option}</option> ))}
           </select>

@@ -11,7 +11,7 @@ class App extends React.Component {
       super(props)
 
       this.state = {
-        data: this.props.data,
+        data: this.props.data.details,
         carMake: '',
         model: '',
         multiple: true
@@ -37,7 +37,7 @@ class App extends React.Component {
 
   render () {
 
-    let filteredItems = this.props.data;
+    let filteredItems = this.props.data.details;
     let state = this.state;
     let filterProperties = ["carMake", "model"];
 
@@ -49,8 +49,8 @@ class App extends React.Component {
       }
     });
 
-    let carMakeArray = this.props.data.map(item => item.carMake );
-    let modelArray = this.props.data.map(item => item.model );
+    let carMakeArray = this.props.data.details.map(item => item.carMake );
+    let modelArray = this.props.data.details.map(item => item.model );
 
     carMakeArray.unshift("");
     modelArray.unshift("");

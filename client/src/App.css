@@ -26,6 +26,7 @@ html,body {
   border-bottom: solid 1px goldenrod;
 }
 .filter-options {
+
   display: flex;
   margin-bottom: 20px;
 }
