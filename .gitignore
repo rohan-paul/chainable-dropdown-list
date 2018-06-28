@@ -24,6 +24,7 @@ yarn-error.log*
 _gh_pages
 .ruby-version
 keys_dev.js
+index-bakup.js
 
 # Numerous always-ignore extensions
 *.diff

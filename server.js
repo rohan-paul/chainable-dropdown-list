@@ -2,10 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require('body-parser');
+var cors = require('cors');
 
 const app = express();
 
 // middlewares
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use(bodyParser.text());
@@ -24,6 +26,7 @@ mongoose
     .connect(db)
     .then(() => console.log("MongoDB Connection established"))
     .catch((err) => console.log(err))
+
 
 // Code to be able to run the server in Heroku. Locally the Express server runs on 5000 - and create-react-app server runs on 3000. I need to combine them to run both in one command. Thats why I need to run npm run build and point to the file ..client/build/index.html from server.js. But ultimately the build folder will be created by Heroku, only for production env. And so I will never need the build folder for development. Thats why its gitignor-ed as well.
 

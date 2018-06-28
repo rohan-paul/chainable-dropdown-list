@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 // import Navbar from './components/layout/Navbar'
 
 import FilterOptions from './components/FilterOptions';
@@ -11,11 +12,22 @@ class App extends React.Component {
       super(props)
 
       this.state = {
-        data: this.props.data.details,
+        data: [],
         carMake: '',
         model: '',
         multiple: true
       }
+    }
+
+    componentDidMount(){
+      axios.get('http://localhost:5000/')
+      .then(response => {
+        const data = response.data
+        this.setState({ data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
     }
 
   checked = (e) => {
@@ -37,7 +49,7 @@ class App extends React.Component {
 
   render () {
 
-    let filteredItems = this.props.data.details;
+    let filteredItems = this.state.data;
     let state = this.state;
     let filterProperties = ["carMake", "model"];
 
@@ -49,8 +61,8 @@ class App extends React.Component {
       }
     });
 
-    let carMakeArray = this.props.data.details.map(item => item.carMake );
-    let modelArray = this.props.data.details.map(item => item.model );
+    let carMakeArray = this.state.data.map(item => item.carMake );
+    let modelArray = this.state.data.map(item => item.model );
 
     carMakeArray.unshift("");
     modelArray.unshift("");
@@ -66,7 +78,7 @@ class App extends React.Component {
             changeOption={this.filterItems} />
 
         <div className="filter-form">
-          <FilterItems data={filteredItems} toggle={true} />
+          <FilterItems data={filteredItems} />
         </div>
       </div>
     )
