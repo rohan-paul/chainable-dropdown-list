@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from 'App';
-import ReactTestUtils from 'react-dom/test-utils';
+import expect from 'expect';
 
 describe('App', () => {
-  it('should exist', () => {
-    expect(App).toBeTruthy();
+  it('should properly run tests', () => {
+    expect(1).toBe(1);
   });
 });
+

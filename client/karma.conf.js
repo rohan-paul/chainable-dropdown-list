@@ -1,4 +1,4 @@
-var webpackConfig = require('../webpack.config.js');
+var webpackConfig = require('./webpack.config.js');
 
 module.exports = function (config) {
   config.set({
@@ -6,10 +6,10 @@ module.exports = function (config) {
     singleRun: true,
     frameworks: ['mocha'],
     files: [
-      '/tests/**/*.test.js'
+      'src/tests/**/*.test.js'
     ],
     preprocessors: {
-      '/tests/**/*.test.js': ['webpack', 'sourcemap']
+      'src/tests/**/*.test.js': ['webpack', 'sourcemap']
   },
   reporters: ['mocha'],
   client: {
