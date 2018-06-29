@@ -16,6 +16,9 @@
 .env.test.local
 .env.production.local
 
+# For the .env file where I will save my mLab/Mongo credentials
+.env
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -23,7 +26,7 @@ yarn-error.log*
 # Ignore docs files
 _gh_pages
 .ruby-version
-index-bakup.js
+index-backup.js
 
 # Numerous always-ignore extensions
 *.diff

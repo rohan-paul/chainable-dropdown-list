@@ -23,10 +23,11 @@ describe('App', () => {
 });
 
 // The below test is failing
+
 /* describe('App', function () {
   it('App component loads without problems', function () {
-    var App = ReactTestUtils.renderIntoDocument(<App/>);
+    var app = ReactTestUtils.renderIntoDocument(<App/>);
 
-  expect(App).toExist();
+  expect(app).toExist();
   });
 }); */

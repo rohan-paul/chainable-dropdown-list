@@ -30,11 +30,6 @@ class App extends React.Component {
       })
     }
 
-/*   checked = (e) => {
-    this.setState({multiple: e.target.value});
-  }
- */
-
   filterItems = (val, type) => {
      switch (type) {
       case 'carMake':

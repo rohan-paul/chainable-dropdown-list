@@ -10,22 +10,23 @@ describe('FilterItems', () => {
   });
 });
 
-describe('FilterItems', function () {
+/* describe('FilterItems', function () {
   it('loads without problems', function () {
     require('../components/FilterItems');
   });
-});
+}); */
 
 // The below 2 tests are failing - giving " Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined."
 
-/* describe('FilterItems', function () {
+describe('FilterItems', function () {
   it('loads without problems', function () {
-    var FilterItems = ReactTestUtils.renderIntoDocument(<FilterItems/>);
+    var filterItems = ReactTestUtils.renderIntoDocument(<FilterItems
+      data={ [1, 2, 3] }
+      />);
 
-  expect(FilterItems).toExist();
+  expect(filterItems).toBeTruthy();
   });
-}); */
-
+});
 
 /* describe('FilterItems', function () {
 
