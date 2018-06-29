@@ -4,7 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const publicPath = '/';
-// const srcPath = path.join(__dirname, 'src');
+const srcPath = path.join(__dirname, 'src');
 const outputPath = path.resolve(__dirname, 'static');
 
 
