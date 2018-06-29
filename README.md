@@ -2,7 +2,7 @@ A UI page built with MERN stack (database served from mLab)
 
 # Basic flow of the current functionality
 
-**From the Express backend, I have feeded data ( for my Car database model )to mLab database with POST request from POSTMAN**
+**From the Express backend, I have feeded data ( for my Car database model ) to database hostd mLab with POST request from POSTMAN**
 
 **Then with React Front end will fetch that data from the **http://localhost:5000** ( which is where my Express server is running) and render it.**
 
@@ -13,10 +13,10 @@ A UI page built with MERN stack (database served from mLab)
 # Install dependencies for server
 npm install
 
-# Install dependencies for client by navigating to the the /client directory
+# Install dependencies for client by navigating to the the ./client directory
 npm install
 
-# Run the client & server with concurrently
+# Run both the client & server (using concurrently npm package)
 npm run dev
 
 # Run the Express server only

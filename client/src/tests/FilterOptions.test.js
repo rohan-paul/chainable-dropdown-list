@@ -15,15 +15,15 @@ describe('FilterOptions', function () {
   });
 });
 
-// The below test is failing - giving " Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined."
+// The below 2 tests are failing - giving " Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined."
 
-/* describe('FilterOptions', function () {
+describe('FilterOptions', function () {
   it('loads without problems', function () {
     var FilterOptions = ReactTestUtils.renderIntoDocument(<FilterOptions/>);
 
   expect(FilterOptions).toExist();
   });
-}); */
+});
 
 /* describe('FilterOptions', function () {
 
