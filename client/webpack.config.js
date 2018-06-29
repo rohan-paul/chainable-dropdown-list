@@ -5,46 +5,82 @@ const path = require('path');
 const publicPath = '/';
 const srcPath = path.join(__dirname, 'src');
 
-/*const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/public/index.html"
-  
-});*/
-
 module.exports = {
   entry: [
         path.join(srcPath, 'index.js'),
     ],
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
+    module: {
+      rules: [
+          /*{
+              enforce: 'pre',
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              loader: 'eslint-loader',
+          },*/
           {
-            loader: "style-loader"
+              test: /\.(js|jsx)$/,
+              exclude: /node_modules/,
+              use: {
+                  loader: 'babel-loader',
+                  options: {
+                      presets: [
+                          'env',
+                          'react',
+                          'es2015',
+                          'stage-0',
+                      ],
+                  },
+              },
           },
           {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
-              minimize: true
-            }
-          }
-        ]
-      }
-    ],
+              test: /\.css$/,
+              use: [
+                  'style-loader',
+                  'css-loader',
+              ],
+          },
+          {
+              test: /\.scss$/,
+              use: [
+                  'style-loader',
+                  'css-loader',
+                  'sass-loader',
+              ],
+          },
+          {
+              test: /\.pcss$/,
+              use: [
+                  'style-loader',
+                  {
+                      loader: 'css-loader',
+                      options: {
+                          modules: true,
+                      },
+                  },
+                  'postcss-loader',
+              ],
+          },
+          {
+              test: /\.(jpe?g|png|gif|svg)$/i,
+              loader: 'url-loader',
+              query: {
+                  name: '[name].[hash].[ext]',
+                  outputPath: 'images/',
+                  publicPath: publicPath,
+              },
+          },
+          {
+              test: /\.(eot|svg|ttf|woff|woff2)$/,
+              loader: 'file-loader',
+              query: {
+                  name: '[name].[hash].[ext]',
+                  outputPath: 'fonts/',
+              },
+          },
+      ],
   },
   plugins: [
-    new HtmlWebPackPlugin({      
+    new HtmlWebPackPlugin({
       inject: false,
       hash: true,
       template: './src/index.html',

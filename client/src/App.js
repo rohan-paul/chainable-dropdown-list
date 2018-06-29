@@ -30,9 +30,10 @@ class App extends React.Component {
       })
     }
 
-  checked = (e) => {
+/*   checked = (e) => {
     this.setState({multiple: e.target.value});
   }
+ */
 
   filterItems = (val, type) => {
      switch (type) {
@@ -64,6 +65,7 @@ class App extends React.Component {
     let carMakeArray = this.state.data.map(item => item.carMake );
     let modelArray = this.state.data.map(item => item.model );
 
+    // In the drop-down add an extra empty row at the beginning.
     carMakeArray.unshift("");
     modelArray.unshift("");
 

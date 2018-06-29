@@ -1,3 +1,4 @@
+import React from 'react';
 import expect from 'expect';
 
 describe('App', () => {
@@ -6,3 +7,8 @@ describe('App', () => {
   });
 });
 
+describe('app', function () {
+  it('loads without problems', function () {
+    require('../App');
+  });
+});
