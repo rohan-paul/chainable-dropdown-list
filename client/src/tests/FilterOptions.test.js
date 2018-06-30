@@ -2,7 +2,9 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import { ReactTestUtils } from 'react-dom/test-utils'; // ES6
 import expect from 'expect';
+import toJson from 'enzyme-to-json';
 import FilterOptions from '../components/FilterOptions';
+import { shallow, mount } from 'enzyme';
 
 
 describe('FilterOptions', () => {
@@ -17,30 +19,15 @@ describe('FilterOptions', function () {
   });
 });
 
-// The below 2 tests are failing - giving " Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined."
-
-describe('FilterOptions', () => {
-
-  it('FilterOptions component loads without problems', () => {
-  var filterOptions = ReactTestUtils.renderIntoDocument(<FilterOptions
-      data={ [1, 2, 3] }
-      carMakeOptions={ ['a', 'b', 'c'] }
-      modelOptions={ ['a', 'b', 'c'] }
-      changeOption={ ['a', 'b', 'c'] }
-    />);
-
-  expect(filterOptions).toBeTruthy();
-  });
+it('shallow render without crashing', () => {
+  const wrapper = shallow(<FilterOptions
+      data={ [ 1, 2, 3] }
+      carMakeOptions={ [ 1, 2, 3] }
+      modelOptions={ [ 1, 2, 3] }
+      changeOption={ [ 1, 2, 3] }
+   />);
+  expect(wrapper).toMatchSnapshot();
 });
-
-/* describe('FilterOptions', () => {
-  it('renders without crashing', () => {
-      const div = document.createElement('div');
-      ReactDOM.render(<FilterOptions/>, div);
-
-      expect(FilterOptions).toExist();
-    });
-  }); */
 
 /* describe('FilterOptions', function () {
 
