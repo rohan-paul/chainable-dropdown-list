@@ -14,7 +14,8 @@ describe('FilterItems', () => {
 
 it('shallow render without crashing', () => {
   const wrapper = shallow(<FilterItems
-      data={ [ 1, 2, 3] }      
+      data={ [ 1, 2, 3] }
+      key={"footer"}
    />);
   expect(wrapper).toMatchSnapshot();
 });

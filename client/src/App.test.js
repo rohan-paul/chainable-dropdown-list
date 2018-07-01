@@ -5,18 +5,14 @@ import App from './App';
 
 import { shallow, mount } from 'enzyme';
 
-
-/*it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});*/
-
+// create-react-app's auto-generated test code
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+// my own test-code with jest
 
 it('shallow render without crashing', () => {
   const wrapper = shallow(<App />);

@@ -75,7 +75,7 @@ class App extends React.Component {
             changeOption={this.filterItems} />
 
         <div className="filter-form">
-          <FilterItems data={filteredItems} />
+          <FilterItems key={filteredItems.name} data={filteredItems} />
         </div>
       </div>
     )

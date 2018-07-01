@@ -1,4 +1,4 @@
-A UI page built with MERN stack (database served from mLab)
+A UI page built with MERN stack (database served from mLab). Testing with Jest
 
 # Basic flow of the current functionality
 
