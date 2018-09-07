@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "A chained dropdown UI with React",
   "main": "server.js",
-  "scripts": {
-    "webpack": "webpack",
-    "build": "webpack --config webpack.config.js",
+  "scripts": {    
     "client-install": "npm start --prefix client",
-    "start": "npm run webpack && nodemon --exec babel-node server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
