@@ -8,4 +8,4 @@ let CarSchema = new Schema({
   model: String
 });
 
-module.exports = mongoose.model('car', CarSchema);
+module.exports = Car = mongoose.model('car', CarSchema);
