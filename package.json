@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A chained dropdown UI with React",
   "main": "server.js",
-  "scripts": {    
+  "scripts": {
     "client-install": "npm start --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
