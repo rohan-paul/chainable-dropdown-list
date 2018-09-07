@@ -4,7 +4,7 @@ class FilterOptions extends React.Component {
 
   changeOption = (type, e) => {
     let val = e.target.value;
-    this.props.changeOption(val, type);
+    this.props.changeOptionProp(val, type);
   }
 
   render () {

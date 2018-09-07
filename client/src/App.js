@@ -72,7 +72,7 @@ class App extends React.Component {
             data={this.state.data}
             carMakeOptions={carMakeArray}
             modelOptions={modelArray}
-            changeOption={this.filterItems} />
+            changeOptionProp={this.filterItems} />
 
         <div className="filter-form">
           <FilterItems key={filteredItems.name} data={filteredItems} />
@@ -83,3 +83,8 @@ class App extends React.Component {
 };
 
 export default App;
+
+/* The changeOptionProp above is an example of how data is being passed from parent to child - https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
+
+Within the parent component, I have the 'filterItems' variable which has access to the data. But I need my child component to have access too. So, I pass it as a prop to the child.
+  */

@@ -1,5 +1,7 @@
 A UI page built with MERN stack (database served from mLab). Testing with Jest
 
+<img src="chainable-dropdown-list.jpeg">
+
 # Basic flow of the current functionality
 
 **From the Express backend, I have feeded data ( for my Car database model ) to database hosted mLab with POST request from POSTMAN**
