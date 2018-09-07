@@ -31,7 +31,7 @@ mongoose
 
 // Code to be able to run the server in Heroku. Locally the Express server runs on 5000 - and create-react-app server runs on 3000. I need to combine them to run both in one command. Thats why I need to run npm run build and point to the file ..client/build/index.html from server.js. But ultimately the build folder will be created by Heroku, only for production env. And so I will never need the build folder for development. Thats why its gitignor-ed as well.
 
-app.use('/', car);
+app.use('/api', car);
 
 if (process.env.NODE_ENV === 'production') {
   // first set static folder for production env
