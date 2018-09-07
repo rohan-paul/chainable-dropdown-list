@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require('body-parser');
 var cors = require('cors');
-require ('dotenv').config();
+// require ('dotenv').config();
 
 const app = express();
 
