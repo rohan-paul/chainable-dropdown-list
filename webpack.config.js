@@ -25,6 +25,13 @@ const config = {
         extensions: ['.js', '.jsx'],
     },
 
+    resolveLoader: {
+        modules: [
+          'node_modules',
+          path.join(__dirname, '../node_modules'),
+        ],
+    },
+
     module: {
         rules: [
             /*{
